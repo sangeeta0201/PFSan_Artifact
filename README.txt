@@ -108,8 +108,6 @@ __________________________________________________________________
 
 (3). Performance testing (Shorter Version) (Section 5: (Performance speedup with PFSan compared to FPSanitizer))
 
-  This version will take around 
-
   $ cd /home/psan_fse_2021/performance
   $ ./run_perf_short.sh
   This script will run performance benchmarks and produce graphs similar to speedup.pdf(Figure 8)
