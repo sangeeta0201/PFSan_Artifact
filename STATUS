@@ -1,0 +1,8 @@
+Badges Requested
+
+We have provided a detailed readme with our submission. It provides all the information to reproduce the data in the paper.
+We have packed all the required software in a docker image, and we have hosted it on a Dockerhub to make it publicly available.
+We have provided the link to the Github repository, which has all the instructions to run artifacts manually. 
+Additionally, our artifact has been tested by a team other than the authors. 
+
+Hence we are claiming for Artifacts Evaluated, Artifacts Available, and Results Validated badges.
