@@ -1,0 +1,20 @@
+* DOWNLOADING PREBUILT DOCKER IMAGE
+
+   	 We have prebuilt a docker image and hosted it in the docker hub.
+
+(1) Install docker if not already installed by following the
+   	 installation documentation in this link:
+   	 https://docs.docker.com/install/
+
+	 We recommend installing Docker and evaluating our artifact on a machine with Ubuntu. Although docker can be used with
+	 Windows or macOS, docker may run on top of a Linux VM.
+
+(2) Download the prebuilt docker image by using the command:
+	 
+	 $ sudo docker pull sc1696/pfsan_artifact:latest
+
+	 The docker image is roughly 1.21GB
+
+(3) Run the docker image:
+
+	 $ sudo docker run -it --cap-add=SYS_PTRACE --security-opt seccomp=unconfined sc1696/pfsan_artifact:latest
