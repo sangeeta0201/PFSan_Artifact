@@ -1,0 +1,9 @@
+* HARDWARE & SOFTWARE REQUIREMENTS:
+
+	We recommend evaluating our artifact with a machine that has:
+	Multi-core processors
+  Disk Storage: at least 10 GB available
+	RAM memory: 16GB
+	Processor: 4GHz
+	OS: Ubuntu 18.04
+  Docker installed
