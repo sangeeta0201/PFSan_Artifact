@@ -46,9 +46,9 @@ __________________________________________________________________
 
 * STEP BY STEP INSTRUCTIONS TO EVALUATE THE ARTIFACT
 
-(1) Testing the correctness of PFSan (Section 5:Ability to detect FP errors):
+(1) Testing the correctness of PFPSanitizer (Section 5:Ability to detect FP errors):
 
-  This process should take less than 4 minutes. This script will run microbenchmarks with PFSan and report numerical errors. It runs 43 benchmarks and reports numerical errors in these benchmarks, 
+  This process should take less than 4 minutes. This script will run microbenchmarks with PFPSanitizer and report numerical errors. It runs 43 benchmarks and reports numerical errors in these benchmarks, 
         i.e., catastrophic cancellation, NaN, Inf, branch flips, and integer conversion error. The
 	  script also outputs whether this error is correctly found (expected
 	  with green letters) or incorrectly found (unexpected with red
@@ -106,19 +106,17 @@ __________________________________________________________________
   The first instruction in the trace shows real computation as 2.70400010000000e7 and floating-point computation as 27040000, hence rounding error has occurred.
   $ quit
 
-(3). Performance testing (Shorter Version) (Section 5: (Performance speedup with PFSan compared to FPSanitizer))
+(3). Performance testing (Section 5: (Performance speedup with PFPSanitizer compared to FPSanitizer))
 
-  $ cd /home/PFPSanitizer/performance
-  $ ./run_perf_short.sh
-  This script will run performance benchmarks and produce graphs similar to speedup.pdf(Figure 8)
-  and slowdown.pdf(Figure 9) with only 128 bits of precision and 1, 8, 32, and 64 number of cores.
-  Please note that we have disabled turbo-boost and hyper-threading, and our data is generated on a 64 core machine.
-
-(4). Performance testing (Full Version) (Section 5: (Performance speedup with PFSan compared to FPSanitizer))
+  We have done our performance experiments with licensed spec benchmarks, and we won't provide the source code of spec benchmarks. However, please check our public git repo for patch update:https://github.com/rutgers-apl/PFPSanitizer
+  
+  We have provided benchmarks that don't require license.
 
   $ cd PFPSanitizer/performance
   $ ./run_perf.sh
-  This script will run performance benchmarks and produce graphs speedup.pdf(Figure 8)
-  and slowdown.pdf(Figure 9).
+  This script will run two performance benchmarks and produce graphs speedup.pdf(Figure 8)
+  and slowdown.pdf(Figure 9), only for AMG and MILCmk.
+
   Please note that we have disabled turbo-boost and hyper-threading, and our data is
   generated on a 64 core machine.
+
