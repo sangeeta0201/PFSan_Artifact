@@ -66,7 +66,7 @@ __________________________________________________________________
         5 programs with branch flips, and 0 program
 	  with integer conversion error.
 
-  $ cd psan_fse_2021/correctness_suite
+  $ cd PFPSanitizer/correctness_suite
   $ python3 correctness_test.py
   $ cd ..
 
@@ -83,7 +83,7 @@ __________________________________________________________________
   $ make clean
   $ make
   $ gdb ./cholesky_fp
-  $ b handleReal.cpp:1416
+  $ b handleReal.cpp:1335
     Make breakpoint pending on future shared library load? (y or [n]) y
   $ r
   $ call fpsan_trace(buf_id, res)
@@ -96,7 +96,7 @@ __________________________________________________________________
   450 follow the below instructions.
 
 
-  $ b handleReal.cpp:1367 if res->error >= 28
+  $ b handleReal.cpp:1287 if res->error >= 28
   $ r
     Start it from the beginning? (y or n) y
   $ call fpsan_trace(buf_id, res)
@@ -108,7 +108,7 @@ __________________________________________________________________
 
 (3). Performance testing (Shorter Version) (Section 5: (Performance speedup with PFSan compared to FPSanitizer))
 
-  $ cd /home/psan_fse_2021/performance
+  $ cd /home/PFPSanitizer/performance
   $ ./run_perf_short.sh
   This script will run performance benchmarks and produce graphs similar to speedup.pdf(Figure 8)
   and slowdown.pdf(Figure 9) with only 128 bits of precision and 1, 8, 32, and 64 number of cores.
@@ -116,7 +116,7 @@ __________________________________________________________________
 
 (4). Performance testing (Full Version) (Section 5: (Performance speedup with PFSan compared to FPSanitizer))
 
-  $ cd psan_fse_2021/performance
+  $ cd PFPSanitizer/performance
   $ ./run_perf.sh
   This script will run performance benchmarks and produce graphs speedup.pdf(Figure 8)
   and slowdown.pdf(Figure 9).
